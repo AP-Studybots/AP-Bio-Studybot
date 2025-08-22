@@ -11,10 +11,10 @@ import java.util.Arrays;
 public class Constants {
 
     // Change these prefixes to the said AP prefix. Ex: for AP HAG, change prefix to !hag and slashPrefix to hag.
-    public static String prefix = "!csa";
-    public static String slashPrefix = "csa"; // Yea you have to put a / before this everytime
+    public static String prefix = "!bio";
+    public static String slashPrefix = "bio"; // Yea you have to put a / before this everytime
 
-    public static int numUnits = 4; // The number of units the course has. Max of 25 units or else options crash
+    public static int numUnits = 8; // The number of units the course has. Max of 25 units or else options crash
 
     public static int unitQuestionTimeoutInMinutes = 3; // (No Change) - Should be 3
     public static int unitQuestionIntervalCheckInSeconds = 30; // (No Change) - Should be 30
@@ -30,16 +30,16 @@ public class Constants {
 
     public static int[] pointTitles = {0, 100, 250, 500, 1000}; // (No Change) - Points until next title
 
-    public static int[] scorePercents = {77, 60, 42, 36}; // The percents to score a 5, 4, 3, and 2
+    public static int[] scorePercents = {77, 61, 42, 23}; // The percents to score a 5, 4, 3, and 2
 
     // (No Change) - Collegeboard logo
     public static String collegeBoardThumbnail = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN2KG3StxIW0KW9EZP4pbSYbW-_1pJw9YtdR3HsZnyGTu1as-kFCJusA-qDROINnG9vJI&usqp=CAU";
 
     // Picture of the AP course(AP classroom picture)
-    public static String APPicture = "https://images-ext-1.discordapp.net/external/O91y0nM-QHluCrrKWyJaoTagrp9FvPlPzlggBaS-NZI/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/1401736371508613120/054bf5ff6af1656b42f02def5333e6ed.png?format=webp&quality=lossless&width=768&height=768";
+    public static String APPicture = "https://img.youtube.com/vi/ZVyoFZRMxbg/maxresdefault.jpg\n";
 
     // To invite the bot to your server
-    public static String botInviteLink = "https://discord.com/oauth2/authorize?client_id=1401736371508613120&permissions=2147503104&integration_type=0&scope=bot";
+    public static String botInviteLink = "https://discord.com/oauth2/authorize?client_id=1407653965176377424&permissions=2147503104&integration_type=0&scope=bot";
 
     // (No Change) - Integrated AI prompt
     public static String COMMAND_GUIDE_PROMPT =
@@ -69,34 +69,34 @@ public class Constants {
     public static MessageEmbed createResourcesEmbed() {
         EmbedBuilder embed = new EmbedBuilder()
                 .setTitle("📚 AP " + Constants.slashPrefix.toUpperCase() + " Study Resources")
-                .setDescription("Here are some valuable resources to help you succeed in AP Computer Science A:")
-                .setColor(0x3498db)
+                .setDescription("Here are some valuable resources to help you succeed in AP Biology:")
+                .setColor(0x27ae60) // green-ish for biology
                 .setThumbnail(Constants.collegeBoardThumbnail)
 
                 // Official College Board Resources
                 .addField("🎓 Official College Board Resources",
-                        "• [Course Overview](https://apstudents.collegeboard.org/courses/ap-computer-science-a)\n" +
-                                "• [Course Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf)\n" +
-                                "• [Past Exam Questions](https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam)\n" +
+                        "• [Course Overview](https://apstudents.collegeboard.org/courses/ap-biology)\n" +
+                                "• [Course Description](https://apcentral.collegeboard.org/pdf/ap-biology-course-and-exam-description.pdf)\n" +
+                                "• [Past Exam Questions](https://apcentral.collegeboard.org/courses/ap-biology/exam)\n" +
                                 "• [AP Classroom](https://myap.collegeboard.org/) (Requires teacher login)", false)
 
                 // Video Tutorials
                 .addField("📺 Video Tutorials",
-                        "• [College Board AP CSA Playlist](https://www.youtube.com/playlist?list=PLoGgviqq4845xKOY11PnkE4aqdBmDx1LO)\n" +
-                                "• [Khan Academy AP CSA](https://www.khanacademy.org/computing/ap-computer-science-principles)\n" +
-                                "• [CS Awesome Interactive Textbook](https://runestone.academy/ns/books/published/csawesome/index.html)", false)
+                        "• [College Board AP Biology Playlist](https://www.youtube.com/playlist?list=PLoGgviqq4845jZR0MgqV8OdX27HPbm0lr)\n" +
+                                "• [Khan Academy AP Biology](https://www.khanacademy.org/science/ap-biology)\n" +
+                                "• [Bozeman Science AP Biology](https://www.youtube.com/playlist?list=PLFCE4D99C4124A27A)", false)
 
-                // Practice Sites
-                .addField("💻 Practice & Coding Sites",
-                        "• [CodingBat Java Practice](https://codingbat.com/java)\n" +
-                                "• [Practice-it (UW)](https://practiceit.cs.washington.edu/)\n" +
-                                "• [Replit Java Online IDE](https://replit.com/languages/java)", false)
+                // Practice & Study Sites
+                .addField("🧪 Practice & Study Sites",
+                        "• [AP Biology Course Notes](https://www.course-notes.org/Biology)\n" +
+                                "• [Albert.io AP Biology Practice](https://www.albert.io/ap-biology)\n" +
+                                "• [Quizlet AP Biology Flashcards](https://quizlet.com/subject/ap-biology/)", false)
 
                 // Additional Help
                 .addField("🆘 Additional Help",
-                        "• [Java Documentation](https://docs.oracle.com/javase/8/docs/api/)\n" +
-                                "• [GeeksforGeeks Java](https://www.geeksforgeeks.org/java/)\n" +
-                                "• [Stack Overflow](https://stackoverflow.com/)", false)
+                        "• [CliffsNotes AP Biology Study Guide](https://www.cliffsnotes.com/study-guides/ap/biology)\n" +
+                                "• [Crash Course Biology](https://www.youtube.com/playlist?list=PL3EED4C1D684D3ADF)\n" +
+                                "• [Fiveable AP Biology](https://library.fiveable.me/ap-bio)", false)
 
                 // Bot Invite
                 .addField("🤖 Bot Invite",
@@ -107,6 +107,7 @@ public class Constants {
         return embed.build();
     }
 
+
     // (No Change) - The total number of questions in the units
     public static int sum;
 
@@ -114,44 +115,70 @@ public class Constants {
     public static void SendAvailableQuestions(MessageReceivedEvent event) {
 
         EmbedBuilder embed = new EmbedBuilder();
-        embed.setTitle("📚 Available Practice Questions 📚");
+        embed.setTitle("📚 Available AP Biology Practice Questions 📚");
         embed.setThumbnail(Constants.APPicture);
-        embed.setColor(0x3498db);
+        embed.setColor(0x27ae60); // green-ish for biology
 
         embed.setDescription(String.format(
                 "**Total Questions:** %d\n\nUse `!" + Constants.slashPrefix + "<number>`,  `/" + Constants.slashPrefix + "-practice-question`, or `/" +
                         Constants.slashPrefix + "-test` to start practicing!\n----------------------------------------------------", sum
         ));
 
-        embed.addField("**Unit 1:** Using Objects & Methods",
+        embed.addField("**Unit 1:** Chemistry of Life",
                 String.format(
-                        "🔹 **%d questions**\nFocuses on Strings, Math, method calls, and basic object interaction.\n\u200B",
+                        "🔹 **%d questions**\nFocuses on atoms, molecules, macromolecules, water properties, and chemical reactions.\n\u200B",
                         Unit1.numUnit1Questions),
                 false);
 
-        embed.addField("**Unit 2:** Selection & Iteration",
+        embed.addField("**Unit 2:** Cell Structure & Function",
                 String.format(
-                        "🔹 **%d questions**\nCovers if/else, boolean expressions, loops, and control flow.\n\u200B",
+                        "🔹 **%d questions**\nCovers cell organelles, membrane transport, cell communication, and cell energetics.\n\u200B",
                         Unit2.numUnit2Questions),
                 false);
 
-        embed.addField("**Unit 3:** Class Creation",
+        embed.addField("**Unit 3:** Genetics & Heredity",
                 String.format(
-                        "🔹 **%d questions**\nIncludes constructors, fields, accessors/mutators, `this`, and encapsulation.\n\u200B",
+                        "🔹 **%d questions**\nIncludes Mendelian genetics, Punnett squares, DNA replication, transcription, and translation.\n\u200B",
                         Unit3.numUnit3Questions),
                 false);
 
-        embed.addField("**Unit 4:** Data Collections",
+        embed.addField("**Unit 4:** Cell Communication & Cell Cycle",
                 String.format(
-                        "🔹 **%d questions**\nFocuses on arrays, ArrayLists, 2D arrays, traversals, search/sort, and algorithms.\n\n" +
-                                "[Visit Our Website](https://customdiscordbots.org)\n" +
-                                "Contact <@840216337119969301> for any questions",
+                        "🔹 **%d questions**\nFocuses on cell signaling, cell cycle regulation, checkpoints, and cancer biology.\n\u200B",
                         Unit4.numUnit4Questions),
                 false);
+
+        embed.addField("**Unit 5:** Evolution",
+                String.format(
+                        "🔹 **%d questions**\nCovers natural selection, speciation, phylogenetics, and population genetics.\n\u200B",
+                        Unit5.numUnit5Questions),
+                false);
+
+        embed.addField("**Unit 6:** Diversity of Life",
+                String.format(
+                        "🔹 **%d questions**\nIncludes prokaryotes, eukaryotes, protists, plants, fungi, and animal diversity.\n\u200B",
+                        Unit6.numUnit6Questions),
+                false);
+
+        embed.addField("**Unit 7:** Ecology",
+                String.format(
+                        "🔹 **%d questions**\nFocuses on ecosystems, energy flow, biogeochemical cycles, and population dynamics.\n\u200B",
+                        Unit7.numUnit7Questions),
+                false);
+
+        embed.addField("**Unit 8:** Physiology",
+                String.format(
+                        "🔹 **%d questions**\nCovers animal structure and function, homeostasis, plant systems, and feedback mechanisms.\n\n" +
+                                "[Visit Our Website](https://customdiscordbots.org)\n" +
+                                "Contact <@840216337119969301> for any questions",
+                        Unit8.numUnit8Questions),
+                false);
+
         embed.setFooter("All questions are student-created! Please report if you see any mistakes!");
 
         event.getChannel().sendMessageEmbeds(embed.build()).queue();
     }
+
 
 
     // (No Change) - Possible end of test messages
