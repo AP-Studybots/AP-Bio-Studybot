@@ -20,6 +20,9 @@ public class UnitListener extends ListenerAdapter {
         String message = event.getMessage().getContentRaw().trim();
 
         if (user.isBot()) return;
+        if (message.equals(Constants.botMention)) {
+            event.getChannel().sendMessage("Hello " + event.getMember().getAsMention() + " , please use `/" + Constants.slashPrefix + "-practice-question` to get started!").queue();
+        }
 
         if (!message.startsWith(Constants.prefix)) { return; } // Otherwise the message doesn't matter to the bot
 
